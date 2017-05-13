@@ -1,8 +1,7 @@
 package fazai.com.br.fazai.fragments;
 
 
-import android.content.Context;
-import android.net.ConnectivityManager;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.design.widget.CollapsingToolbarLayout;
@@ -16,9 +15,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.EditText;
 import android.widget.ImageView;
-import android.widget.RatingBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -28,11 +25,9 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.Unbinder;
 import fazai.com.br.fazai.R;
-import fazai.com.br.fazai.http.EstabelecimentoByIdTask;
+import fazai.com.br.fazai.activities.CarrinhoComprasActivity;
 import fazai.com.br.fazai.http.ItemCardapioByIdTask;
-import fazai.com.br.fazai.http.ItemCardapioTask;
 import fazai.com.br.fazai.model.Constantes;
-import fazai.com.br.fazai.model.Estabelecimento;
 import fazai.com.br.fazai.model.ItemCardapio;
 import fazai.com.br.fazai.model.ValorReal;
 import fazai.com.br.fazai.model.VerifyConnection;
@@ -95,7 +90,8 @@ public class ItemCardapioDetalheFragment extends Fragment implements LoaderManag
         mFab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(getActivity(), R.string.abrir_tela_de_compra, Toast.LENGTH_SHORT).show();
+                //Toast.makeText(getActivity(), R.string.abrir_tela_de_compra, Toast.LENGTH_SHORT).show();
+                startActivity(new Intent(getContext(), CarrinhoComprasActivity.class));
             }
         });
 

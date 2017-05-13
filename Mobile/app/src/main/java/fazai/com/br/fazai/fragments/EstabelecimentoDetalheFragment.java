@@ -1,10 +1,6 @@
 package fazai.com.br.fazai.fragments;
 
-import android.support.v7.app.AppCompatActivity;
-
-import android.content.Context;
 import android.content.Intent;
-import android.net.ConnectivityManager;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -37,7 +33,7 @@ import butterknife.ButterKnife;
 import butterknife.OnClick;
 import butterknife.Unbinder;
 import fazai.com.br.fazai.R;
-import fazai.com.br.fazai.activities.CardapioActivity;
+import fazai.com.br.fazai.activities.ItensCardapioActivity;
 import fazai.com.br.fazai.http.EstabelecimentoByIdTask;
 import fazai.com.br.fazai.model.Estabelecimento;
 import fazai.com.br.fazai.model.VerifyConnection;
@@ -141,11 +137,11 @@ public class EstabelecimentoDetalheFragment extends Fragment implements View.OnC
         verifyConnection = new VerifyConnection(getActivity());
         verifyConnection.verificaConexao();
 
-        /* ------ABRIR ACTIVITY DE CARDAPIOS APENAS PARA TESTE ------- */
+        /* ------ABRIR ACTIVITY DE PRATOS APENAS PARA TESTE ------- */
         mFab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getContext(), CardapioActivity.class);
+                Intent intent = new Intent(getContext(), ItensCardapioActivity.class);
                 startActivity(intent);
             }
         });

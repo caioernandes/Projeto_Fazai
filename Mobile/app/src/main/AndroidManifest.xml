@@ -51,7 +51,7 @@
         </activity>
         <activity
             android:name=".activities.LoginActivity"
-            android:screenOrientation="portrait"></activity>
+            android:screenOrientation="portrait" />
 
         <meta-data
             android:name="com.google.android.geo.API_KEY"
@@ -72,28 +72,29 @@
                 android:value=".activities.MainActivity" />
         </activity>
         <activity
-            android:name=".activities.CardapioActivity"
-            android:label="@string/title_acitivity_cardapios" />
-        <activity
             android:name=".activities.ConfiguracoesActivity"
             android:theme="@style/AppTheme" />
         <activity
             android:name=".activities.ItensCardapioActivity"
             android:label="@string/title_acitivity_item_cardapio" />
+        <activity android:name=".activities.DetalheItemCardapioActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".activities.ItensCardapioActivity" />
+        </activity>
         <activity
-            android:name=".activities.DetalheItemCardapioActivity">
-        <meta-data
-            android:name="android.support.PARENT_ACTIVITY"
-            android:value=".activities.ItensCardapioActivity" />
-    </activity>
-
-          <activity
             android:name=".activities.SobreActivity"
             android:label="@string/app_name"
             android:theme="@style/AppTheme.NoActionBar">
-        <meta-data
-            android:name="android.support.PARENT_ACTIVITY"
-            android:value=".activities.MainActivity" /></activity>
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".activities.MainActivity" />
+        </activity>
+        <activity
+            android:name=".activities.CarrinhoComprasActivity"
+            android:label="@string/title_activity_carrinho_compras"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".activities.ItensCarrinhoActivity"></activity>
     </application>
 
 </manifest>
